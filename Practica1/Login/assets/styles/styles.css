@@ -2,20 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
-    --header-height: 3.5rem;
-  
     /*========== Colors ==========*/
-    --first-hue: 185;
-    --sat: 100%;
-    --lig: 50%;
-    --second-hue: 250;
-    --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-    --first-color-alt: hsl(var(--first-hue), var(--sat), 46%); /* -4% */
-    --title-color: hsl(var(--second-hue), 15%, 95%);
-    --text-color: hsl(var(--second-hue), 8%, 75%);
-    --text-color-light: hsl(var(--second-hue), 4%, 55%);
-    --body-color: hsl(var(--second-hue), 68%, 8%);
-    --container-color: hsl(var(--second-hue), 32%, 12%);
+    --first-hue: 189;
+    --first-sat: 61%;
+    --first-lig: 73%;
+    --second-hue: 212;
+    --second-sat:95%;
+    --second-lig: 16%;
+    --first-color: hsl(var(--first-hue), var(--first-sat), var(--first-lig)); /* AZULITO CLARO */
+    --second-color: hsl(var(--second-hue), var(--second-sat), var(--second-lig)); /* AZUL OSCURO */
+    --background-light-color: hsl(var(--first-hue), var(--first-sat), 98%);
+    --first-color-hover: hsl(var(--first-hue), var(--first-sat), 66%); /* -7% */
+    --text-color: hsl(var(--second-hue), var(--second-sat), var(--second-lig));
+    --text-color-light: hsl(var(--second-hue), 20%, 50%);
+    --container-color: var(--white);
     --black: #000;
     --white: #fff;
   /*========== Font and typography ==========*/
@@ -25,50 +25,146 @@
   --h1-font-size: 1.5rem; /* 24px */
   --h2-font-size: 1.25rem; /* 20px */
   --h3-font-size: 1rem; /* 16px */
-  --normal-font-size: .938rem; /* 15px */
-  --small-font-size: .813rem; /* 13px */
+  --big-font-size: 1.125rem; /* 18px */
+  --normal-font-size: 1rem; /* 16px */
+  --small-font-size: .875rem; /* 14px */
   --smaller-font-size: .75rem; /* 12px */
   --tiny-font-size: .625rem;  /* 10px */
   
     /*========== Font weight ==========*/
+    --font-nomal: 400;
     --font-medium: 500;
-    --font-semibold: 600;
-  }
+    --font-bold: 700;
+}
 
-  
-.container {
-    width: 100%;
-    height: 100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--body-color);
+/*=============== ESTILOS GENERALES ===============*/
+body {
+    font-family: var(--body-font);
+    font-size: var(--big-font-size);
+    background-color: var(--background-light-color);
 }
-.content__login {
-    padding: 2rem;
-    background-color: var(--container-color);
-    border-radius: 1rem;
-    width: 25%;
-    height: 60%;
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    color: var(--text-color);
 }
-.content__form {
-    display: flex;
-    flex-direction: column;
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    color: var(--text-color);
 }
-label {
-    color: white;
+h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+    color: var(--text-color);
+}
+p {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-nomal);
+    color: var(--text-color);
+}
+
+/* --- BOTON PRINCIPAL --- */
+.btn__primary {
+    background-color: var(--first-color);
+    color: var(--white);
+    border: none;
+    border-radius: .5rem;
+    padding: .75rem 2rem;
+    cursor: pointer;
+}
+.btn__primary--hover:hover {
+    background-color: var(--first-color-hover);
+    transition: background-color 0.3s;
+}
+.btn__primary--outline {
+    background-color: transparent;
+    border-radius: .5rem;
+    border: 2px solid var(--first-color);
+    color: var(--first-color);
+    padding: .75rem 2rem;
+    cursor: pointer;
+}
+.btn__primary--outline--focus:hover {
+    background-color: var(--first-color);
+    color: var(--white);
+    transition: background-color 0.3s;
+}
+.link {
+    color: var(--text-color-light);
+}
+.link:hover {
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+/* --- INPUTS Y LABELS --- */
+.input__primary {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--first-color);
+    color: var(--text-color-light);
+    padding: .5rem;
+    outline: none;    
+}
+.input__primary::placeholder {
+    transition: color 0.3s;
+    color: var(--text-color-ligh);
+}
+.input__primary--focus:focus {
+    border-bottom: 3px solid var(--first-color-hover);
+    transition: color 0.3s;
+    color: var(--text-color);
+}
+.label {
+    color: var(--text-color);
     font-weight: var(--font-medium);
     margin-bottom: .5rem;
 }
 
-input {
-    background-color: var(--container-color);
-    border: none;
-    border-bottom: 1px solid var(--first-color);
-    color: var(--text-color);
-    padding: .5rem;
-    outline: none;
-    font-weight: var(--font-medium);
+
+/* ---------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: var(--normal-font-size);
+    }
+    .login__img {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    .img__logo {
+        width: 15rem;
+    }
+    .btn__subscribe {
+        margin-top: 3rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .img__logo {
+        display: none;
+    }
+    .content__login {
+        background-color: var(--container-color);
+    }
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.content__login {
+    margin: auto;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    max-width: 40rem;
+}
+.login__form {
+    margin: 0 0 2rem 0;
+}
+.content__form {
+    display: flex;
+    flex-direction: column;
 }
 .content__password {
     margin-top: 1rem;
@@ -79,53 +175,16 @@ input {
     margin-bottom: 2rem;
 }
 .btn__login {
-    margin-top: 1.5rem;
-    background-color: var(--first-color);
-    color: var(--black);
-    border: none;
-    border-radius: .5rem;
-    padding: .5rem;
-    font-weight: var(--font-medium);
-    cursor: pointer;
     width: 100%;
 }
-.btn__login:hover {
-    background-color: var(--first-color-alt);
+.buton__login {
+    margin-top: 2rem;
 }
-.forgot-pass__link {
-    color: var(--text-color);
-    font-weight: var(--font-medium);
+.login__forgot-pass {
+    display: flex;
+    justify-content: center;
     margin-top: 1rem;
-    text-align: center;
-    display: block;
 }
-
-.forgot-pass__link:hover {
-    color: var(--first-color-alt);
-}
-.subscribe__btn {
+.btn__subscribe {
     width: 100%;
-    margin-top: 1rem;
-    text-align: center;
-    font-weight: var(--font-medium);
-    cursor: pointer;
-    border: 1px solid var(--first-color);
-    background-color: transparent;
-    border-radius: .5rem;
-    color: var(--first-color);
-    height: 2rem;
-}
-.subscribe__btn:hover {
-    background-color: var(--first-color);
-    color: var(--black);
-}
-
-@media screen and (max-width: 768px) {
-    .img {
-        display: none;
-    }
-    .subscribe__btn {
-        margin-top: 12rem;
-        
-    }
 }

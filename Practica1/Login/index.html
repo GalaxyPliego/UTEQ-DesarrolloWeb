@@ -7,14 +7,9 @@
 
         <!--=============== CSS ===============-->
         <!--NORMALICE-->
-        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="assets/styles/normalize.css">
         <!--STYLES-->
-        <link rel="stylesheet" href="styles/styles.css">
-        
-        <!--=============== FONTS ===============-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/styles/styles.css">
     
     <title>Practica 1 - Login</title>
 </head>
@@ -22,28 +17,26 @@
     <section class="container">
         <div class="content__login">
             <div class="login__img">
-                <div class="img">
-                    <img class="img__logo" src="styles/log-puma.png" alt="" width="200px" height="100px">
-                </div>
+                <img class="img__logo" src="assets/images/GalaxyLogo.png" alt="">            
             </div>
             <div class="login__form">
                 <form action="">
                     <div class="content__email content__form">
-                        <label for="correoElectronico labels">Correo electrónico</label>
-                        <input type="text" class="input" placeholder="tucorreo@gmail.com">
+                        <label class="label" for="correoElectronico labels">Correo electrónico</label>
+                        <input type="text" class="input__primary input__primary--focus" placeholder="tucorreo@gmail.com">
                     </div>
                     <div class="content__password content__form">
-                        <label for="correoElectronico labels">Contraseña</label>
-                        <input type="text" class="input" placeholder="*********">
+                        <label class="label" for="correoElectronico">Contraseña</label>
+                        <input type="text" class="input__primary input__primary--focus" placeholder="*********">
                     </div>
-                    <input type="submit" class="btn__login" value="INISIAR SESIÓN">
+                    <input type="submit" class="btn__login btn__primary btn__primary--hover buton__login" value="INISIAR SESIÓN">
+                    <div class="login__forgot-pass">
+                        <a href="#" class="link">Olvidé mi contraseña</a>
+                    </div>
                 </form>
             </div>
-            <div class="login__forgot-pass">
-                <a href="#" class="forgot-pass__link">Olvidé mi contraseña</a>
-            </div>
             <div class="login__subscribe">
-                <button class="subscribe__btn">Subscribirse</button>
+                <button class="btn__primary--outline btn__primary--outline--focus btn__subscribe">Subscribirse</button>
             </div>
         </div>
     </section>
