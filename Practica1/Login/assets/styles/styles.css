@@ -32,7 +32,7 @@
   --tiny-font-size: .625rem;  /* 10px */
   
     /*========== Font weight ==========*/
-    --font-nomal: 400;
+    --font-normal: 400;
     --font-medium: 500;
     --font-bold: 700;
 }
@@ -44,6 +44,7 @@ body {
     background-color: var(--background-light-color);
 }
 h1 {
+    margin: 0;
     font-size: var(--h1-font-size);
     font-weight: var(--font-bold);
     color: var(--text-color);
@@ -60,7 +61,7 @@ h3 {
 }
 p {
     font-size: var(--normal-font-size);
-    font-weight: var(--font-nomal);
+    font-weight: var(--font-normal);
     color: var(--text-color);
 }
 
@@ -133,18 +134,26 @@ p {
         justify-content: center;
         margin-bottom: 2rem;
     }
-    .img__logo {
+    .img__logo, .img {
         width: 15rem;
+    }
+    .img_forgot-pass {
+        width: 20rem;
     }
     .btn__subscribe {
         margin-top: 3rem;
     }
 }
 @media screen and (min-width: 768px) {
+    p {
+        font-size: var(--big-font-size);
+        font-weight: var(--font-normal);
+        color: var(--text-color);
+    }
     .img__logo {
         display: none;
     }
-    .content__login {
+    .content__login, .bg-container {
         background-color: var(--container-color);
     }
 }
@@ -156,7 +165,7 @@ p {
     width: 100%;
     height: 100vh;
 }
-.content__login {
+.content__login, .content__forgot-pass {
     padding: 2rem 1rem;
     border-radius: 1rem;
     width: 40rem;
@@ -189,4 +198,25 @@ p {
 }
 .btn__subscribe {
     width: 100%;
+}
+
+/* ========== OLVIDE CONTRASEÑA =========== */
+.content__forgot-pass {
+    padding: 1rem;
+}
+.container__img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.img_forgot-pass {
+    width: 10rem;
+}
+.content__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5rem;
+}
+.content__subtitle p {
+    color: var(--text-color-light);
 }
