@@ -93,6 +93,7 @@ p {
 }
 .link {
     color: var(--text-color-light);
+    text-decoration: none;
 }
 .link:hover {
     color: var(--text-color);
@@ -134,14 +135,83 @@ p {
         justify-content: center;
         margin-bottom: 2rem;
     }
-    .img__logo, .img {
+    .img__logo, .img, .img_forgot-pass {
         width: 15rem;
     }
-    .img_forgot-pass {
-        width: 20rem;
+    .login__subscribe {
+        display: flex;
     }
     .btn__subscribe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 3rem;
+        width: 100%;
+    }
+    .content__cards--resume {
+        flex-direction: column-reverse;
+    }
+
+    /* ------------  ORDEN ------------------------------ */
+    .container__orden{
+        display: flex;
+        justify-content: center;
+    }
+    .content__orden {
+        background-color: var(--container-color);
+        width: 100%;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    .title__primary {
+        font-weight: var(--font-bold);
+        font-size: 1.5rem;
+    }
+    .content__cards--resume {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .card__resumen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--first-color);
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    .title__secondary {
+        font-weight: var(--font-bold);
+        font-size: var(--big-font-size);
+        margin: 0;
+    }
+    .articulos {
+        color: var(--white);
+        font-weight: var(--font-bold);
+        font-size: 1.3rem;
+        margin: .8rem 0 0 0;
+    }
+    .price__total {
+        font-weight: var(--font-bold);
+        font-size: var(--big-font-size);
+    }
+    .img-tshirt {
+        width: 5rem;
+        border-radius: .5rem;
+        background-color: hsl(var(--second-hue), var(--second-sat), var(--second-lig), .1);
+    }
+    .description {
+        font-size: 1.5rem;
+        color: var(--text-color-light);
+        font-weight: var(--font-bold);
+    }
+    .price__card h2 {
+        font-size: 1.5rem;
     }
 }
 @media screen and (min-width: 768px) {
@@ -153,11 +223,94 @@ p {
     .img__logo {
         display: none;
     }
+    .img_forgot-pass {
+        width: 25rem;
+    }
     .content__login, .bg-container {
         background-color: var(--container-color);
     }
+    .login__subscribe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn__subscribe {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+    }
+
+    /* ------------  ORDEN ------------------------------ */
+    .container__orden{
+        display: flex;
+        justify-content: center;
+    }
+    .content__orden {
+        background-color: var(--container-color);
+        border-radius: 1rem;
+        width: 40rem;
+        padding: 2rem;
+        margin: 3rem 0;
+    }
+    .title__primary {
+        font-weight: var(--font-bold);
+        font-size: 2rem;
+    }
+    .content__cards--resume {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .card__resumen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--first-color);
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+    }
+    .title__secondary {
+        font-weight: var(--font-bold);
+        font-size: var(--biggest-font-size);
+        margin: 0;
+    }
+    .articulos {
+        color: var(--white);
+        font-weight: var(--font-bold);
+        font-size: 1.5rem;
+        margin: .8rem 0 0 0;
+    }
+    .price__total {
+        font-weight: var(--font-bold);
+        font-size: var(--biggest-font-size);
+    }
+    .price__total h2 {
+        font-size: 2rem;
+    }
+    .img-tshirt {
+        width: 10rem;
+        border-radius: .5rem;
+        background-color: hsl(var(--second-hue), var(--second-sat), var(--second-lig), .1);
+    }
+    .description {
+        font-size: 2rem;
+        color: var(--text-color-light);
+        font-weight: var(--font-bold);
+    }
+    .price__card h2 {
+        font-size: 2rem;
+    }
 }
 
+.navbar {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+} 
 .container {
     display: flex;
     justify-content: center;
@@ -176,6 +329,9 @@ p {
 .content__form {
     display: flex;
     flex-direction: column;
+}
+.content__email {
+    margin-top: 1rem;
 }
 .content__password {
     margin-top: 1rem;
@@ -198,19 +354,18 @@ p {
 }
 .btn__subscribe {
     width: 100%;
+    text-decoration: none;
 }
 
 /* ========== OLVIDE CONTRASEÑA =========== */
 .content__forgot-pass {
     padding: 1rem;
+    height: 30rem;
 }
 .container__img {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-}
-.img_forgot-pass {
-    width: 10rem;
 }
 .content__title {
     display: flex;
@@ -220,3 +375,4 @@ p {
 .content__subtitle p {
     color: var(--text-color-light);
 }
+
