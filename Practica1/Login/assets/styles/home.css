@@ -93,8 +93,12 @@ p {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100px;
-        height: 200px;
+        max-width: auto;
+        height: auto;
+        background-color: var(--container-color);
+        border-radius: .5rem;
+        padding: 1rem;
+        
     }
     .img__tshirt {
         width: 6rem;
@@ -102,13 +106,6 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .product-card {
-        width: 150px;
-        height: 200px;
-        background-color: var(--container-color);
-        border-radius: .5rem;
-        padding: 1rem;
     }
     .card__info {
         width: 100%;
@@ -139,6 +136,20 @@ p {
     }
     .navbar-email {
         display: none;
+    }
+    .icon__count {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: var(--first-color);
+        font-size: var(--small-font-size);
+        font-weight: 700;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media screen and (min-width: 768px) {
@@ -192,9 +203,27 @@ p {
     align-items: center;
     height: 60px;
 }
-.menu {
-    display: none;
-}
+    .menu {
+        display: none;
+    }
+    .icon__count {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: var(--first-color);
+        font-size: var(--small-font-size);
+        font-weight: 700;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-derecha {
+        display: flex;
+        align-items: center;
+    }
 }
 .navbar {
     padding: 1rem;
@@ -211,6 +240,7 @@ p {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 0 24px;
     border-bottom: 1px;
     margin-top: 10px;
@@ -244,20 +274,7 @@ nav {
 .navbar-carrito {
     position: relative;
 }
-.navbar-carrito div {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: var(--first-color);
-    font-size: var(--small-font-size);
-    font-weight: 700;
-    position: absolute;
-    top: -8px;
-    right: -3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .carrito {
     width: 50px;
     height: 50px;
