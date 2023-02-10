@@ -1,0 +1,35 @@
+:root {
+    /*========== Colors ==========*/
+    --first-hue: 30;
+    --first-sat: 97%;
+    --first-lig: 51%;
+    --second-hue: 237;
+    --second-sat:51%;
+    --second-lig: 21%;
+    --first-color: hsl(var(--first-hue), var(--first-sat), var(--first-lig)); /* NARANJA CLARO */
+    --second-color: hsl(var(--second-hue), var(--second-sat), var(--second-lig)); /* AZUL OSCURO */
+    --background-light-color: hsl(var(--first-hue), var(--first-sat), 98%);
+    --first-color-hover: hsl(var(--first-hue), var(--first-sat), 66%); /* -7% */
+    --text-color: hsl(0, 0%, 100%);
+    --text-color-light: hsl(var(--second-hue), 20%, 50%);
+    --container-color: hsla(0, 0%, 100%, .05);
+    --black: #000;
+    --white: #fff;
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 1.75rem; /* 28px */
+  --h1-font-size: 1.5rem; /* 24px */
+  --h2-font-size: 1.25rem; /* 20px */
+  --h3-font-size: 1rem; /* 16px */
+  --big-font-size: 1.125rem; /* 18px */
+  --normal-font-size: 1rem; /* 16px */
+  --small-font-size: .875rem; /* 14px */
+  --smaller-font-size: .75rem; /* 12px */
+  --tiny-font-size: .625rem;  /* 10px */
+  
+    /*========== Font weight ==========*/
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+}

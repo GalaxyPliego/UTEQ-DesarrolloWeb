@@ -1,0 +1,253 @@
+@import 'vars';
+.body {
+    font-family: var(--body-font);
+    font-size: var(--big-font-size);
+    background-color: #1A1D50;
+    height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+    }
+    .content__404{
+        width: 100%;
+        height: 100%;  
+    }
+    body {
+        font-size: var(--normal-font-size);
+        background-color: #1A1D50;
+        height: 100vh;
+    }
+    .btn {
+        position: absolute;
+        bottom: 4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        text-align: center;
+        background-color: #FB8109;
+        color: var(--white);
+        border: none;
+        text-decoration: none;
+        border-radius: .5rem;
+        padding: .75rem 2rem;
+        width: 60%;
+        cursor: pointer;
+    }
+    .btn-hover:hover {
+        background-color: var(--first-color-hover);
+        transition: background-color 0.3s;
+    }
+    .oops {
+        display: flex;
+        justify-content: center;
+        color: #FB8109;
+        font-size: 3rem;
+        margin: 0;
+        padding: 0;
+    }
+    .content__top {
+        height: 40%;
+        margin-top: 3rem;
+    }
+    .content__image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .description {
+        display: flex;
+        justify-content: center;
+        color: white;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .content__body {
+        height: 60%;
+        width: 100%;
+
+    }
+    .txt__404 {
+        font-size: 7rem;
+        color: white;
+    }
+    .img__logo404{
+        width: 7rem;
+    }
+    .nube1 {
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+    }
+    .nube2 {
+        position: absolute;
+        top: 5rem;
+        left: 18rem;
+    }
+    .nube3 {
+        position: absolute;
+        top: 22rem;
+        left: 3rem;
+    }
+    .nube4 {
+        position: absolute;
+        top: 36rem;
+        left: 5rem;
+    }
+    .nube5 {
+        position: absolute;
+        top: 30rem;
+        left: 15rem;
+    }
+    .eart {
+        position: absolute;
+        top: 23rem;
+        left: 17rem;
+    }
+    .astronauta {
+        position: absolute;
+        top: 32rem;
+        left: 4rem;
+    }
+    .bandera {
+        display: none;
+    }
+    .moonBase {
+        position: absolute;
+        bottom: 0rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+}
+@media screen and (min-width: 768px) {
+    p {
+        font-size: var(--big-font-size);
+        font-weight: var(--font-normal);
+        color: var(--text-color);
+    }
+    body {
+        font-size: var(--big-font-size);
+        width: 100%;
+        height: 100vh;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+    }
+    .content__404{
+        width: 100%;
+        height: 100%;  
+    }
+    .btn {
+        position: absolute;
+        bottom: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        text-align: center;
+        background-color: #FB8109;
+        color: var(--white);
+        border: none;
+        text-decoration: none;
+        border-radius: .5rem;
+        padding: .75rem 2rem;
+        width: 30%;
+        cursor: pointer;
+    }
+    .btn-hover:hover {
+        background-color: var(--first-color-hover);
+        transition: background-color 0.3s;
+    }
+    .oops {
+        display: flex;
+        justify-content: center;
+        color: #FB8109;
+        font-size: 4rem;
+        margin: 0;
+        padding: 0;
+    }
+    .content__top {
+        height: 40%;
+        margin-top: 5rem;
+    }
+    .content__image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .description {
+        display: flex;
+        justify-content: center;
+        color: white;
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    .content__body {
+        height: 60%;
+        width: 100%;
+
+    }
+    .txt__404 {
+        font-size: 11rem;
+        color: white;
+    }
+    .img__logo404{
+        width: 10rem;
+    }
+    .nube1 {
+        position: absolute;
+        top: 6rem;
+        left: 31rem;
+    }
+    .nube2 {
+        position: absolute;
+        top: 15rem;
+        left: 67rem;
+    }
+    .nube3 {
+        position: absolute;
+        top: 22rem;
+        left: 36rem;
+    }
+    .nube4 {
+        position: absolute;
+        top: 31rem;
+        left: 50rem;
+    }
+    .nube5 {
+        position: absolute;
+        top: 28rem;
+        left: 65rem;
+    }
+    .eart {
+        position: absolute;
+        top: 21rem;
+        left: 67rem;
+    }
+    .astronauta {
+        position: absolute;
+        top: 22rem;
+        left: 27rem;
+    }
+    .bandera {
+        z-index: 100;
+        position: absolute;
+        bottom: .5rem;
+        left: 57rem;
+    }
+    .moonBase {
+        position: absolute;
+        bottom: 0rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+    
+}
